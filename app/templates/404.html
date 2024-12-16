@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The home page of the musical store">
+    <title>FashionIcon</title>
+    <link rel="icon" type="image/x-icon" href="../static/images/favicon.ico.jpg">
+    <link rel="stylesheet" href="../static/css/reset.css">
+    <link rel="stylesheet" href="../static/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&display=swap" rel="stylesheet">
+</head>
+
+<body id="body">
+    <header id="header">
+        <section class="container nav-flex">
+            <h1 class="branding"><a href="{{ url_for('index')  }}"><span class="logo1">Fashion</span><span
+                        class="logo2">Icon</span></a></h1>
+            <nav>
+                <ul class="navbar">
+                    <li class="mobile-view"><a href="{{ url_for('index')  }}">Home</a></li>
+                    <li><a href="{{ url_for('store')  }}">Store</a></li>
+                    <li><a href="https://www.linkedin.com/in/iyinoluwa-akenroye" target="_blank"
+                            rel="noopener noreferrer">Contact us</a></li>
+                </ul>
+            </nav>
+        </section>
+    </header>
+
+    <article class="showcase">
+        <section class="container error">
+            <h1>Oops! Sorry, that clothing item is not available!😢</h1>
+            <br>
+            <h1>Please check back soon...</h1>
+            <p class="error-upload"><a href="{{  url_for('upload')  }}">Add Clothing Items</a></p>
+        </section>
+    </article>
+
+    <footer id="footer">
+        <p class="home-footer">&copy; <span class="logo1">Fashion</span><span class="logo2">Icon</span> 2024</p>
+    </footer>
+    <script src="../static/js/backgroundChanger.js"></script>
+</body>

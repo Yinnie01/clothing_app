@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="The home page of the musical store">
+    <title>FashionIcon</title>
+    <link rel="icon" type="image/x-icon" href="../static/images/favicon.ico.jpg">
+    <link rel="stylesheet" href="../static/css/reset.css">
+    <link rel="stylesheet" href="../static/css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Delius+Swash+Caps&display=swap" rel="stylesheet">
+</head>
+
+<body id="body">
+    <header id="header">
+        <section class="container nav-flex">
+            <h1 class="branding"><a href="{{ url_for('index')  }}"><span class="logo1">Fashion</span><span
+                        class="logo2">Icon</span></a></h1>
+            <nav>
+                <ul class="navbar">
+                    <li class="mobile-view"><a href="{{ url_for('index')  }}">Home</a></li>
+                    <li><a href="{{ url_for('store')  }}">Store</a></li>
+                    <li><a href="https://www.linkedin.com/in/iyinoluwa-akenroye" target="_blank"
+                            rel="noopener noreferrer">Contact us</a></li>
+                </ul>
+            </nav>
+        </section>
+    </header>
+
+    <article class="showcase upload-item">
+        <section class="container">
+            <h1>Upload New Clothing Items: </h1>
+            <form id="upload" class="upload-form" action="" method="POST">
+                {{ template_upload.hidden_tag() }}
+
+                <p>{{ template_upload.category.label }}</p>
+                <div class="radio">
+                    {% for button in template_upload.category %}
+                    <p>{{ button() }}{{ button.label }}</p>
+                    {% endfor %}
+                </div>
+                <p>{{ template_upload.type.label }} {{ template_upload.type() }}</p>
+                <p>{{ template_upload.designer.label }} {{ template_upload.designer() }}</p>
+                <p>{{ template_upload.colour.label }} {{ template_upload.colour() }}</p>
+                <p>{{ template_upload.description.label }} {{ template_upload.description() }}</p>
+                <p>{{ template_upload.price.label }} {{ template_upload.price() }}</p>
+                <p>{{ template_upload.submit() }}</p>
+
+            </form>
+        </section>
+    </article>
+
+    <footer id="footer" class="store-footer">
+        <p class="home-footer">&copy; <span class="logo1">Fashion</span><span class="logo2">Icon</span> 2024</p>
+    </footer>
+    <script src="../static/js/backgroundChanger.js"></script>
+</body>
