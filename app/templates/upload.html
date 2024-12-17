@@ -33,7 +33,7 @@
     <article class="showcase upload-item">
         <section class="container">
             <h1>Upload New Clothing Items: </h1>
-            <form id="upload" class="upload-form" action="" method="POST">
+            <form id="upload" class="upload-form" action="" method="post">
                 {{ template_upload.hidden_tag() }}
 
                 <p>{{ template_upload.category.label }}</p>
@@ -48,12 +48,11 @@
                 <p>{{ template_upload.description.label }} {{ template_upload.description() }}</p>
                 <p>{{ template_upload.price.label }} {{ template_upload.price() }}</p>
                 <p>{{ template_upload.submit() }}</p>
-
             </form>
         </section>
     </article>
 
-    <footer id="footer" class="store-footer">
+    <footer id="footer">
         <p class="home-footer">&copy; <span class="logo1">Fashion</span><span class="logo2">Icon</span> 2024</p>
     </footer>
     <script src="../static/js/backgroundChanger.js"></script>

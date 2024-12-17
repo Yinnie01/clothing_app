@@ -33,7 +33,7 @@
     <article class="showcase">
         <section class="container">
             <h1 class="store-info">Available Clothing Items: </h1>
-            <form id="search" class="form" action="{{  url_for('store')  }}" method="POST">
+            <form id="search" class="form" action="{{  url_for('store')  }}" method="post">
                 {{ template_search.hidden_tag() }}
                 {{ template_search.description() }}
                 {{ template_search.submit() }}

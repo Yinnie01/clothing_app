@@ -12,7 +12,7 @@ class FieldsRequiredForm(FlaskForm):
             return super().render_field(field, render_kw)
 
 class SearchItem(FlaskForm):
-    description = StringField("", render_kw={"placeholder": "Search for items and brands"}, validators=[DataRequired()])
+    description = StringField("", render_kw={"placeholder": "Search for items and brands"})
     submit = SubmitField("Search")
 
 class UploadItem(FieldsRequiredForm):

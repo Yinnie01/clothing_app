@@ -396,9 +396,11 @@ Store Page Rulesets
 
 .store-footer {
     margin-top: 0;
-    position: relative;
+    position: fixed;
     bottom: 0;
     z-index: 20;
+    color: rgb(29, 119, 98);
+    font-weight: bold;
 }
 
 .store-info {
@@ -446,14 +448,13 @@ Store Page Rulesets
     padding-top: 3%;
     padding-bottom: 2%;
     width: 80%;
-    height: 100vh;
+    height: 85vh;
     margin: 0 auto;
     background-color: rgba(0, 0, 0, 0.6);
 }
 
 .upload-item p,
 .upload-item div {
-    display: block;
     margin-bottom: 1rem;
 }
 
@@ -524,10 +525,16 @@ Store Page Rulesets
 .radio {
     display: flex;
     flex-direction: row;
+    gap: 1rem;
+    flex-wrap: wrap;
     margin-right: 1rem;
     justify-content: center;
     align-items: center;
 }
+
+/* .radio p {
+    display: flex;
+} */
 
 @media only screen and (max-width: 912px) {
 
