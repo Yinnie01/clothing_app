@@ -1,7 +1,4 @@
 from flask import Flask, request, render_template, redirect, url_for
-# from flask_sqlalchemy import SQLAlchemy
-# from sqlalchemy import create_engine
-# from sqlalchemy.orm import sessionmaker
 
 from forms import SearchItem, UploadItem
 from models import app, db, Accessories, Bags, Dresses, Footwears, Skirts, Tops, Trousers
@@ -62,4 +59,8 @@ def not_found(e):
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run()
+
+#to create a virtual environment run:
+#python3 -m venv <name_of_environment>
+#<name_of_env>\Scripts\activate
