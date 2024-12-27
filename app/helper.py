@@ -1,4 +1,3 @@
-import re
 
 from models import app, db, Accessories, Bags, Dresses, Footwears, Skirts, Tops, Trousers
 

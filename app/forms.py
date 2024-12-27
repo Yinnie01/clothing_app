@@ -1,5 +1,5 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField, SubmitField, TextAreaField, RadioField
+from wtforms import StringField, SubmitField, TextAreaField, RadioField, DecimalField
 from wtforms.validators import DataRequired
 
 class FieldsRequiredForm(FlaskForm):
@@ -23,5 +23,5 @@ class UploadItem(FieldsRequiredForm):
     designer = StringField("Designer", validators=[DataRequired()])
     colour = StringField("Colour of clothing", validators=[DataRequired()])
     description = TextAreaField("Clothing Description", validators=[DataRequired()])
-    price = StringField("Price ($)", validators=[DataRequired()])
+    price = DecimalField("Price ($)", validators=[DataRequired()])
     submit = SubmitField("Upload Item")
