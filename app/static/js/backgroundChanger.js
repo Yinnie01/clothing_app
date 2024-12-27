@@ -30,39 +30,10 @@ function printSuccessful(event) {
     }, 1000);
 }
 
-// function hideFooter() {
-//     footer.style.display = 'none';
-// }
+
 
 itemOne.onwheel = changeBackground;
 itemFour.onkeydown = submitSearch;
 itemFive.onsubmit = printSuccessful;
-
-let footer = document.querySelector('.store-footer');
-let isScrolling;
-
-// Function to hide the footer
-function hideFooter() {
-    footer.style.display = 'none';
-}
-
-// Function to show the footer
-function showFooter() {
-    footer.style.display = 'block';
-}
-
-// Listen for scroll events
-window.addEventListener('scroll', function () {
-    hideFooter();
-
-    // Clear the timeout if it's already set
-    clearTimeout(isScrolling);
-
-    // Set a timeout to run after scrolling ends
-    isScrolling = setTimeout(function () {
-        showFooter();
-    }, 100); // Adjust the delay as needed
-});
-
 
 
