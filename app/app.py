@@ -3,7 +3,7 @@ from flask import Flask, request, render_template, redirect, url_for
 from forms import SearchItem, UploadItem
 from models import app, db, Accessories, Bags, Dresses, Footwears, Skirts, Tops, Trousers
 from helper import get_items, upload_items
-
+app = Flask(__name__)
 app.config['SECRET_KEY'] = 'SECRET_PROJECT'
 
 @app.route('/', methods=["GET"])
